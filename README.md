@@ -1,6 +1,7 @@
 # projeto_pp2
 
 > Projeto de Prática Profissional II
+Project developed for our 3rd semester at the Technical High School of Campinas
 
 ## Build Setup
 
