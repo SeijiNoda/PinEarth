@@ -1,7 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace backend.Models
 {
     public class ImagemPin
     {
+        [Key]
         public int idImagem 
         {
             get;

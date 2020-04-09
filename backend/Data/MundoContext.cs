@@ -16,10 +16,10 @@ namespace backend.Data
             set;
         }
 
-        public DbSet<ImagemPin> ImagemPin
+        /*public DbSet<ImagemPin> ImagensPin
         {
             get;
             set;
-        }
+        }*/
     }
 }

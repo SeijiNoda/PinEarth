@@ -1,10 +1,15 @@
 using System.Threading.Tasks;
+using backend.Models;
+using backend.Data;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Data
 {
     public class Repository : IRepository
     {
         public MundoContext Context { get; }
+
         public Repository(MundoContext context)
         {
             this.Context = context;
@@ -22,14 +27,38 @@ namespace backend.Data
             this.Context.Remove(entity);
         }
 
-        public Task<bool> SaveChangesAsync()
+        public async Task<bool> SaveChangesAsync()
         {
-            throw new System.NotImplementedException();
+            // Como é tipo Task vai gerar thread, então vamos definir o método como assíncrono (async)
+            // Por ser assíncrono, o return deve esperar (await) se tem alguma coisa para salvar no BD
+            // Ainda verifica se fez alguma alteração no BD, se for maior que 0 retorna true ou false
+            return (await this.Context.SaveChangesAsync() > 0);
         }
 
         public void Update<T>(T entity) where T : class
         {
-            throw new System.NotImplementedException();
+            //throw new System.NotImplementedException();
+            this.Context.Update(entity);
+        }
+
+        public async Task<Pin[]> GetAllPinsAsync()
+        {
+            //throw new System.NotImplementedException();
+            //Retornar para uma query qualquer do tipo Pin
+            IQueryable<Pin> consultaPins = this.Context.Pin;
+            consultaPins = consultaPins.OrderBy(a => a.idPin);
+            // aqui efetivamente ocorre o SELECT no BD
+            return await consultaPins.ToArrayAsync();
+        }
+
+        public async Task<Pin> GetAllPinsAsyncById(int ID)
+        {
+            //throw new System.NotImplementedException();
+            //Retornar para uma query qualquer do tipo Pin
+            IQueryable<Pin> consultaPins = this.Context.Pin;
+            consultaPins = consultaPins.OrderBy(a => a.idPin).Where(pin => pin.idPin == ID);
+            // aqui efetivamente ocorre o SELECT no BD
+            return await consultaPins.FirstOrDefaultAsync();
         }
     }
 }
