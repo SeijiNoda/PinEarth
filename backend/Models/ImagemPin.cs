@@ -5,19 +5,19 @@ namespace backend.Models
     public class ImagemPin
     {
         [Key]
-        public int idImagem 
+        public int IdImagem 
         {
             get;
             set;
         }
 
-        public int idPin
+        public int IdPin
         {
             get;
             set;
         }
 
-        public string url
+        public string Url
         {
             get;
             set;

@@ -8,28 +8,28 @@ namespace backend.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class PinController : Controller
+    public class ImagemPinController : Controller
     {
         public IRepository Repo { get; }
-        public PinController(IRepository repo)
+
+        public ImagemPinController(IRepository repo)
         {
             this.Repo = repo;
-            //construtor
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var result = await this.Repo.GetAllPinsAsync();
+            var result = await this.Repo.GetAllImagesAsync();
             return Ok(result);
         }
 
-        [HttpGet("{PinID}")]
-        public async Task<IActionResult> Get(int PinID)
+        [HttpGet("{ImagemID}")]
+        public async Task<IActionResult> Get(int ImagemID)
         {
             try
             {
-                var result = await this.Repo.GetAllPinsAsyncById(PinID);
+                var result = await this.Repo.GetAllImagesAsyncById(ImagemID);
                 return Ok(result);
             }
             catch
@@ -39,7 +39,7 @@ namespace backend.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> post(Pin model)
+        public async Task<IActionResult> post(ImagemPin model)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace backend.Controllers
                 if (await this.Repo.SaveChangesAsync())
                 {
                     //return Ok();
-                    return Created($"/Pin/{model.IdPin}", model);
+                    return Created($"/ImagemPin/{model.IdImagem}", model);
                 }
 
             }
@@ -60,14 +60,14 @@ namespace backend.Controllers
             return BadRequest();
         }
 
-        [HttpPut("{PinID}")]
-        public async Task<IActionResult> put(int PinID, Pin model)
+        [HttpPut("{ImagemID}")]
+        public async Task<IActionResult> put(int ImagemID, ImagemPin model)
         {
             try
             {
                 //verifica se existe pin a ser alterado
-                var pin = await this.Repo.GetAllPinsAsyncById(PinID);
-                if (pin == null)
+                var imagem = await this.Repo.GetAllImagesAsyncById(ImagemID);
+                if (imagem == null)
                     return NotFound(); //método do EF
                 this.Repo.Update(model);
                 //
@@ -75,8 +75,8 @@ namespace backend.Controllers
                 {
                     //return Ok();
                     //pegar o pin novamente, agora alterado para devolver pela rota abaixo
-                    pin = await this.Repo.GetAllPinsAsyncById(PinID);
-                    return Created($"/Pin/{model.IdPin}", pin);
+                    imagem = await this.Repo.GetAllImagesAsyncById(ImagemID);
+                    return Created($"/ImagemPin/{model.IdImagem}", imagem);
                 }
             }
             catch
@@ -87,16 +87,16 @@ namespace backend.Controllers
             return BadRequest();
         }
 
-        [HttpDelete("{PinID}")]
-        public async Task<IActionResult> delete(int PinID)
+        [HttpDelete("{ImagemID}")]
+        public async Task<IActionResult> delete(int ImagemID)
         {
             try
             {
                 //verifica se existe pin a ser excluído
-                var pin = await this.Repo.GetAllPinsAsyncById(PinID);
-                if (pin == null)
+                var imagem = await this.Repo.GetAllImagesAsyncById(ImagemID);
+                if (imagem == null)
                     return NotFound(); //método do EF
-                this.Repo.Delete(pin);
+                this.Repo.Delete(imagem);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {

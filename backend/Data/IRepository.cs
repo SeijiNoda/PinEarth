@@ -11,8 +11,12 @@ namespace backend.Data
         void Delete<T>(T entity) where T : class;
         Task<bool> SaveChangesAsync();
 
-        //Métodos GET, que não são genéricos, pois possuem algo específico, no caso, Aluno!
+        //Métodos GET, que não são genéricos, pois possuem algo específico, no caso, Pin!
         Task<Pin[]> GetAllPinsAsync();
         Task<Pin> GetAllPinsAsyncById(int ID);
+
+        Task<ImagemPin[]> GetAllImagesAsync();
+
+        Task<ImagemPin> GetAllImagesAsyncById(int ID);
     }
 }

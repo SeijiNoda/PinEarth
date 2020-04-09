@@ -5,31 +5,31 @@ namespace backend.Models
     public class Pin
     {
         [Key]
-        public int idPin 
+        public int IdPin 
         {
             get;
             set;
         }
 
-        public string nomeLocal 
+        public string NomeLocal 
         {
             get;
             set;
         }
 
-        public string pais 
+        public string Pais 
         {
             get;
             set;
         }
 
-        public string coordenadas 
+        public string Coordenadas 
         {
             get;
             set;
         }
 
-        public string descricao 
+        public string Descricao 
         {
             get;
             set;

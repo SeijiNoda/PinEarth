@@ -46,7 +46,7 @@ namespace backend.Data
             //throw new System.NotImplementedException();
             //Retornar para uma query qualquer do tipo Pin
             IQueryable<Pin> consultaPins = this.Context.Pin;
-            consultaPins = consultaPins.OrderBy(a => a.idPin);
+            consultaPins = consultaPins.OrderBy(a => a.IdPin);
             // aqui efetivamente ocorre o SELECT no BD
             return await consultaPins.ToArrayAsync();
         }
@@ -56,9 +56,29 @@ namespace backend.Data
             //throw new System.NotImplementedException();
             //Retornar para uma query qualquer do tipo Pin
             IQueryable<Pin> consultaPins = this.Context.Pin;
-            consultaPins = consultaPins.OrderBy(a => a.idPin).Where(pin => pin.idPin == ID);
+            consultaPins = consultaPins.OrderBy(a => a.IdPin).Where(pin => pin.IdPin == ID);
             // aqui efetivamente ocorre o SELECT no BD
             return await consultaPins.FirstOrDefaultAsync();
+        }
+
+        public async Task<ImagemPin[]> GetAllImagesAsync()
+        {
+            //throw new System.NotImplementedException();
+            //Retornar para uma query qualquer do tipo Pin
+            IQueryable<ImagemPin> consultaImagens = this.Context.ImagemPin;
+            consultaImagens = consultaImagens.OrderBy(a => a.IdImagem);
+            // aqui efetivamente ocorre o SELECT no BD
+            return await consultaImagens.ToArrayAsync();
+        }
+
+        public async Task<ImagemPin> GetAllImagesAsyncById(int ID)
+        {
+            //throw new System.NotImplementedException();
+            //Retornar para uma query qualquer do tipo Pin
+            IQueryable<ImagemPin> consultaImagens = this.Context.ImagemPin;
+            consultaImagens = consultaImagens.OrderBy(a => a.IdImagem).Where(ImagemPin => ImagemPin.IdImagem == ID);
+            // aqui efetivamente ocorre o SELECT no BD
+            return await consultaImagens.FirstOrDefaultAsync();
         }
     }
 }
