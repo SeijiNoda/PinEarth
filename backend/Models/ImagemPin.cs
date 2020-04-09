@@ -1,6 +1,6 @@
 namespace backend.Models
 {
-    public class Imagem
+    public class ImagemPin
     {
         public int idImagem 
         {
