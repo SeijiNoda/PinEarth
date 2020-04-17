@@ -18,5 +18,7 @@ namespace backend.Data
         Task<ImagemPin[]> GetAllImagesAsync();
 
         Task<ImagemPin> GetAllImagesAsyncById(int ID);
+
+        Task<ImagemPin[]> GetAllImagesAsyncByIdPin(int ID);
     }
 }
