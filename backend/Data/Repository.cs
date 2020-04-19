@@ -80,5 +80,16 @@ namespace backend.Data
             // aqui efetivamente ocorre o SELECT no BD
             return await consultaImagens.FirstOrDefaultAsync();
         }
+
+        public async Task<ImagemPin[]> GetAllImagesAsyncByIdPin(int ID)
+        {
+            //throw new System.NotImplementedException();
+            //Retornar para uma query qualquer do tipo Pin
+            IQueryable<ImagemPin> consultaImagens = this.Context.ImagemPin;
+            consultaImagens = consultaImagens.OrderBy(a => a.IdImagem)
+            .Where(ImagemPin => ImagemPin.IdPin == ID);
+            // aqui efetivamente ocorre o SELECT no BD
+            return await consultaImagens.ToArrayAsync();
+        }
     }
 }
