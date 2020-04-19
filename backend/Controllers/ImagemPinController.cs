@@ -65,10 +65,6 @@ namespace backend.Controllers
         {
             try
             {
-                //verifica se existe pin a ser alterado
-                var imagem = await this.Repo.GetAllImagesAsyncById(ImagemID);
-                if (imagem == null)
-                    return NotFound(); //método do EF
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())
@@ -81,7 +77,7 @@ namespace backend.Controllers
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados. Verifique se a imagem realmente existe!");
             }
 
             return BadRequest();
