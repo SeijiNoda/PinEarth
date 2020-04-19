@@ -65,23 +65,19 @@ namespace backend.Controllers
         {
             try
             {
-                //verifica se existe pin a ser alterado
-                var pin = await this.Repo.GetAllPinsAsyncById(PinID);
-                if (pin == null)
-                    return NotFound(); //método do EF
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     //return Ok();
                     //pegar o pin novamente, agora alterado para devolver pela rota abaixo
-                    pin = await this.Repo.GetAllPinsAsyncById(PinID);
+                    var pin = await this.Repo.GetAllPinsAsyncById(PinID);
                     return Created($"/Pin/{model.IdPin}", pin);
                 }
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados.");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados. Verifique se o pin realmente existe!");
             }
 
             return BadRequest();

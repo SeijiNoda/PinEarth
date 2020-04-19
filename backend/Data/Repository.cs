@@ -35,7 +35,7 @@ namespace backend.Data
             return (await this.Context.SaveChangesAsync() > 0);
         }
 
-        public void Update<T>(T entity) where T : class
+        public async void Update<T>(T entity) where T : class
         {
             //throw new System.NotImplementedException();
             this.Context.Update(entity);
@@ -58,6 +58,7 @@ namespace backend.Data
             IQueryable<Pin> consultaPins = this.Context.Pin;
             consultaPins = consultaPins.OrderBy(a => a.IdPin).Where(pin => pin.IdPin == ID);
             // aqui efetivamente ocorre o SELECT no BD
+            
             return await consultaPins.FirstOrDefaultAsync();
         }
 
