@@ -8,28 +8,28 @@ namespace backend.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class ImagemPinController : Controller
+    public class AvaliacaoController : Controller
     {
         public IRepository Repo { get; }
-
-        public ImagemPinController(IRepository repo)
+        public AvaliacaoController(IRepository repo)
         {
             this.Repo = repo;
+            //construtor
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var result = await this.Repo.GetAllImagesAsync();
+            var result = await this.Repo.GetAllAvaliacoesAsync();
             return Ok(result);
         }
 
-        [HttpGet("{ImagemID}")]
-        public async Task<IActionResult> Get(int ImagemID)
+        [HttpGet("{AvaliacaoID}")]
+        public async Task<IActionResult> Get(int AvaliacaoID)
         {
             try
             {
-                var result = await this.Repo.GetAllImagesAsyncById(ImagemID);
+                var result = await this.Repo.GetAllAvaliacoesAsyncById(AvaliacaoID);
                 return Ok(result);
             }
             catch
@@ -39,7 +39,7 @@ namespace backend.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> post(ImagemPin model)
+        public async Task<IActionResult> post(Avaliacao model)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace backend.Controllers
                 if (await this.Repo.SaveChangesAsync())
                 {
                     //return Ok();
-                    return Created($"/ImagemPin/{model.IdImagem}", model);
+                    return Created($"/Avaliacao/{model.idAvaliacao}", model);
                 }
 
             }
@@ -60,8 +60,8 @@ namespace backend.Controllers
             return BadRequest();
         }
 
-        [HttpPut("{ImagemID}")]
-        public async Task<IActionResult> put(int ImagemID, ImagemPin model)
+        [HttpPut("{AvaliacaoID}")]
+        public async Task<IActionResult> put(int AvaliacaoID, Avaliacao model)
         {
             try
             {
@@ -70,29 +70,29 @@ namespace backend.Controllers
                 if (await this.Repo.SaveChangesAsync())
                 {
                     //return Ok();
-                    //pegar a imagem novamente, agora alterado para devolver pela rota abaixo
-                    var imagem = await this.Repo.GetAllImagesAsyncById(ImagemID);
-                    return Created($"/ImagemPin/{model.IdImagem}", imagem);
+                    //pegar a avaliacao novamente, agora alterada para devolver pela rota abaixo
+                    var avaliacao = await this.Repo.GetAllAvaliacoesAsyncById(AvaliacaoID);
+                    return Created($"/Avaliacao/{model.idAvaliacao}", avaliacao);
                 }
             }
             catch
             {
-                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados. Verifique se a imagem realmente existe!");
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no acesso ao banco de dados. Verifique se o Avaliacao realmente existe!");
             }
 
             return BadRequest();
         }
 
-        [HttpDelete("{ImagemID}")]
-        public async Task<IActionResult> delete(int ImagemID)
+        [HttpDelete("{AvaliacaoID}")]
+        public async Task<IActionResult> delete(int AvaliacaoID)
         {
             try
             {
-                //verifica se existe imagem a ser excluída
-                var imagem = await this.Repo.GetAllImagesAsyncById(ImagemID);
-                if (imagem == null)
+                //verifica se existe avaliacao a ser excluída
+                var avaliacao = await this.Repo.GetAllAvaliacoesAsyncById(AvaliacaoID);
+                if (avaliacao == null)
                     return NotFound(); //método do EF
-                this.Repo.Delete(imagem);
+                this.Repo.Delete(avaliacao);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {

@@ -21,5 +21,11 @@ namespace backend.Data
             get;
             set;
         }
+
+        public DbSet<Avaliacao> Avaliacao
+        {
+            get;
+            set;
+        }
     }
 }

@@ -92,5 +92,25 @@ namespace backend.Data
             // aqui efetivamente ocorre o SELECT no BD
             return await consultaImagens.ToArrayAsync();
         }
+
+        public async Task<Avaliacao[]> GetAllAvaliacoesAsync()
+        {
+            //throw new System.NotImplementedException();
+            //Retornar para uma query qualquer do tipo Pin
+            IQueryable<Avaliacao> consultaAvaliacoes = this.Context.Avaliacao;
+            consultaAvaliacoes = consultaAvaliacoes.OrderBy(a => a.idAvaliacao);
+            // aqui efetivamente ocorre o SELECT no BD
+            return await consultaAvaliacoes.ToArrayAsync();
+        }
+
+        public async Task<Avaliacao> GetAllAvaliacoesAsyncById(int ID)
+        {
+            //throw new System.NotImplementedException();
+            //Retornar para uma query qualquer do tipo Pin
+            IQueryable<Avaliacao> consultaAvaliacoes = this.Context.Avaliacao;
+            consultaAvaliacoes = consultaAvaliacoes.OrderBy(a => a.idAvaliacao).Where(Avaliacao => Avaliacao.idAvaliacao == ID);
+            // aqui efetivamente ocorre o SELECT no BD
+            return await consultaAvaliacoes.FirstOrDefaultAsync();
+        }
     }
 }
