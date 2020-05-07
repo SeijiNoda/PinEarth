@@ -71,7 +71,7 @@ namespace backend.Controllers
                 {
                     //return Ok();
                     //pegar o pin novamente, agora alterado para devolver pela rota abaixo
-                    imagem = await this.Repo.GetAllImagesAsyncById(ImagemID);
+                    var imagem = await this.Repo.GetAllImagesAsyncById(ImagemID);
                     return Created($"/ImagemPin/{model.IdImagem}", imagem);
                 }
             }
