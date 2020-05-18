@@ -34,8 +34,7 @@ namespace backend
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                     builder =>
                     {
-                        builder.WithOrigins("http://localhost:5001")
-                        .WithMethods("POST","PUT","DELETE","GET");
+                        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                     });
             });
 
