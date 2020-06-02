@@ -34,5 +34,11 @@ namespace backend.Models
             get;
             set;
         }
+
+        public string WikipediaUrl
+        {
+            get;
+            set;
+        }
     }
 }
