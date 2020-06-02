@@ -34,3 +34,9 @@ update Pin set coordenadas = '20°40´58.3" N 88°34´06.9" O' where idPin = 2
 
 delete from Pin where idPin > 3
 
+alter table pin
+add wikipediaUrl varchar(500)
+
+select * from Pin
+
+update pin set wikipediaUrl = 'https://pt.wikipedia.org/wiki/Torre_Eiffel' where idPin = 9
