@@ -22,7 +22,7 @@ You can find all of our project's test and protypes at [this repository](https:/
 ## Team
 Developed by: 
 - **Matheus Seiji Luna Noda** - _front-end_ - [SeijiNoda](https://github.com/SeijiNoda)
-- **Antônio Hideto Borges Kotsubo** - _???_ - [antoniokot](https://github.com/antoniokot)
+- **Antônio Hideto Borges Kotsubo** - _front-end & back-end_ - [antoniokot](https://github.com/antoniokot)
 - **Nícolas Maisonnette Duarte** - _back-end_ - [NicolasMDuarte](https://github.com/NicolasMDuarte)
 
 ## License
