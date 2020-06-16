@@ -13,3 +13,4 @@ Developed by:
 - [Matheus Seiji Luna Noda](https://github.com/SeijiNoda)
 - [Antônio Hideto Borges Kotsubo](https://github.com/antoniokot)
 - [Nícolas Maisonnette Duarte](https://github.com/NicolasMDuarte)
+![NicolasMDuarte](https://avatars0.githubusercontent.com/u/49459951?s=460&u=fcf6a50e1d271bb850ed2b6719d0519cfdfa5921&v=4)
