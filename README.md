@@ -13,6 +13,11 @@ In this project, we developed an [ASP.net C#](https://dotnet.microsoft.com/apps/
 ### [Prototype](https://github.com/SeijiNoda/PP2-Project-Prototype)
 You can find all of our project's test and protypes at [this repository](https://github.com/SeijiNoda/PP2-Project-Prototype).
 
+## Built With
+- [Vue.js](https://vuejs.org/) - Web framework used
+  - [Webpack](https://webpack.js.org/) - Dependecies management
+- [ASP.net C#](https://dotnet.microsoft.com/apps/aspnet) - used for API creating
+
 ## Team
 Developed by: 
 - **Matheus Seiji Luna Noda** - _front-end_ - [SeijiNoda](https://github.com/SeijiNoda)
