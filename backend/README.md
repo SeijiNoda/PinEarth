@@ -1,5 +1,5 @@
 # ASP.NET PinEarth server
-> A ASP.NET project for demonstrating the use of the framework, interacting with the [frontend](../frontend)'s application.
+> An ASP.NET project for demonstrating the use of the framework, interacting with the [frontend](../frontend)'s application.
 
 ## Getting Started
 To run API command
