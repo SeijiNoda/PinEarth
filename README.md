@@ -10,6 +10,9 @@ This project's front-end was developed with the [Vue.js](https://vuejs.org/) fra
 ### [Backend](./backend)
 In this project, we developed an [ASP.net C#](https://dotnet.microsoft.com/apps/aspnet) API as our backend. It's function was to access ou _database_ and return it's data about our pins, so that we could place it in our map.
 
+### [Prototype](https://github.com/SeijiNoda/PP2-Project-Prototype)
+You can find all of our project's test and protypes at [this repository](https://github.com/SeijiNoda/PP2-Project-Prototype).
+
 ## Team
 Developed by: 
 - [Matheus Seiji Luna Noda](https://github.com/SeijiNoda)
