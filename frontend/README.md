@@ -14,9 +14,9 @@ npm run dev
 Development for this part of the project took place in the first semester of 2020, ending in june 16th.<br>
 Although this folder was only uploaded in such date, the [prototype](https://github.com/SeijiNoda/PP2-Project-Prototype) repository contains a much more specific line o events for this project's development.
 
-## Author
+## Authors
 Made by
 - [Matheus Seiji Luna Noda](https://github.com/SeijiNoda)<br>
-Huge thanks to
+With help of
 - [Antônio Hideto Borges Kotsubo](https://github.com/antoniokot)
 
