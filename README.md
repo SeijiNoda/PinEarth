@@ -18,3 +18,6 @@ Developed by:
 - [Matheus Seiji Luna Noda](https://github.com/SeijiNoda)
 - [Antônio Hideto Borges Kotsubo](https://github.com/antoniokot)
 - [Nícolas Maisonnette Duarte](https://github.com/NicolasMDuarte)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE.md) file for details
