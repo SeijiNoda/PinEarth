@@ -15,9 +15,9 @@ You can find all of our project's test and protypes at [this repository](https:/
 
 ## Team
 Developed by: 
-- [Matheus Seiji Luna Noda](https://github.com/SeijiNoda)
-- [Antônio Hideto Borges Kotsubo](https://github.com/antoniokot)
-- [Nícolas Maisonnette Duarte](https://github.com/NicolasMDuarte)
+- *Matheus Seiji Luna Noda* - _front-end_ - [SeijiNoda](https://github.com/SeijiNoda)
+- *Antônio Hideto Borges Kotsubo* - _???_ - [antoniokot](https://github.com/antoniokot)
+- *Nícolas Maisonnette Duarte* - _back-end_ - [NicolasMDuarte](https://github.com/NicolasMDuarte)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
