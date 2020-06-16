@@ -1,37 +1,23 @@
 <template>
   <div id="app">
-    <nav>
-      <ul>
-        <li v-for="route in routes">
-          <router-link :to="route.path ? route.path : '/'">
-            {{ route.title }}
-          </router-link>
-        </li>
-      </ul>
-    </nav>
-    <router-view></router-view>
+    <navbar>
+      <home></home>
+    </navbar>
   </div>
 </template>
 
 <script>
-import { routes } from "./routes";
+  import Home from "./components/home/Home";
+  import Navbar from "./components/shared/nav/Nav";
 
-export default {
-  data() {
-    return {
-      routes
-    };
-  }
-};
+  export default {
+    components: {
+      home: Home,
+      navbar: Navbar
+    }
+  };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "./styles/main.scss";
 </style>

@@ -3,12 +3,12 @@ import Maps from "./components/map/Map.vue";
 
 export const routes = [
   {
-    path: "",
+    path: "/",
     component: Home,
     title: "Home"
   },
   {
-    path: "",
+    path: "/",
     component: Home,
     title: "About us"
   },
