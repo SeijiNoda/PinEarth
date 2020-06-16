@@ -1,7 +1,10 @@
-# projeto_pp2
+# PinEarth
 
-> Projeto de Prática Profissional II
-Project developed for our 3rd semester at the Technical High School of Campinas
+> PinEarth
+Project developed for our 3rd semester at the Technical High School of Campinas, 2020.
+
+## Front-end
+This project's front-end, it's website, was developed in with the [Vue.js](https://vuejs.org/) framework and, of course, Node.js. Besides that, we also utilized an external API called [MapBox](https://www.mapbox.com/) for our personalized map, and an open-source library called [Leaflet.js](https://leafletjs.com/) for map handling.
 
 ## Build Setup
 
