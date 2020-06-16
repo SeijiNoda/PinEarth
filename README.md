@@ -16,6 +16,7 @@ You can find all of our project's test and protypes at [this repository](https:/
 ## Built With
 - [Vue.js](https://vuejs.org/) - Web framework used
   - [Webpack.js](https://webpack.js.org/) - Dependecies management
+  - [Babel.js](https://babeljs.io/) - JavaScript ES6+ compiler 
 - [ASP.net C#](https://dotnet.microsoft.com/apps/aspnet) - used for API creating
 
 ## Team
