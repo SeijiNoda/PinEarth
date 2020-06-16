@@ -2,21 +2,15 @@
 
 > PinEarth
 Project developed for our 3rd semester at the Technical High School of Campinas, 2020.
+It's goal was to create a tourist atractions map utilizing both, ASP.net C# and Vue.js, for it's development.
 
 ## Front-end
-This project's front-end, it's website, was developed in with the [Vue.js](https://vuejs.org/) framework and, of course, Node.js. Besides that, we also utilized an external API called [MapBox](https://www.mapbox.com/) for our personalized map, and an open-source library called [Leaflet.js](https://leafletjs.com/) for map handling.
+This project's front-end was developed with the [Vue.js](https://vuejs.org/) framework and, of course, Node.js. Besides that, we also utilized an external API called [MapBox](https://www.mapbox.com/) for our personalized map, and an open-source library called [Leaflet.js](https://leafletjs.com/) for map handling.
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+##Team
+Developed by: 
+<ul>
+  <li>[Matheus Seiji Luna Noda](https://github.com/SeijiNoda)</li>
+  <li>[Antônio Hideto Borges Kotsubo](https://github.com/antoniokot)</li>
+  <li>[Nícolas Maisonnette Duarte](https://github.com/NicolasMDuarte)</li>
+</ul>
