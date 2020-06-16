@@ -10,8 +10,6 @@ This project's front-end was developed with the [Vue.js](https://vuejs.org/) fra
 
 ## Team
 Developed by: 
-<ul>
-  <li>[Matheus Seiji Luna Noda](https://github.com/SeijiNoda)</li>
-  <li>[Antônio Hideto Borges Kotsubo](https://github.com/antoniokot)</li>
-  <li>[Nícolas Maisonnette Duarte](https://github.com/NicolasMDuarte)</li>
-</ul>
+- [Matheus Seiji Luna Noda](https://github.com/SeijiNoda)
+- [Antônio Hideto Borges Kotsubo](https://github.com/antoniokot)
+- [Nícolas Maisonnette Duarte](https://github.com/NicolasMDuarte)
