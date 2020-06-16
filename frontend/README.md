@@ -16,7 +16,6 @@ Although this folder was only uploaded in such date, the [prototype](https://git
 
 ## Authors
 Made by
-- [Matheus Seiji Luna Noda](https://github.com/SeijiNoda)<br>
-With help of
+- [Matheus Seiji Luna Noda](https://github.com/SeijiNoda), with help of<br>
 - [Antônio Hideto Borges Kotsubo](https://github.com/antoniokot)
 
