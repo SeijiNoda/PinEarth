@@ -2,4 +2,3 @@
 *.vue linguist-vendored=false
 *.js linguist-vendored=false
 *.html linguist-vendored=false
-*.cs linguist-vendored=false
